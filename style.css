@@ -1,0 +1,111 @@
+:root {
+  --bg-color: #dcefff;
+  --text-color: #000;
+  --card-bg: #ffffffdd;
+  --accent-color: #0077ff;
+  --button-bg: #0077ff;
+  --button-text: #fff;
+  --emoji-size: 1.2em;
+}
+
+body.dark-mode {
+  --bg-color: #0e1b2c;
+  --text-color: #f5f5f5;
+  --card-bg: #1e1e1ecc;
+  --accent-color: #00aaff;
+  --button-bg: #00aaff;
+  --button-text: #000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://source.unsplash.com/1600x900/?sky,cloud') no-repeat center center/cover;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.nav button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav button:hover {
+  background-color: var(--accent-color);
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.weather-info {
+  margin-top: 20px;
+  font-size: 1.1em;
+}
+
+.forecast {
+  margin-top: 20px;
+}
+
+.forecast div {
+  background: #eaf4ff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-left: 4px solid var(--accent-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dark-mode .forecast div {
+  background: #2a2a2a;
+}
+
+#map {
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+ul#historyList {
+  list-style: none;
+  padding: 0;
+}
+
+ul#historyList li {
+  padding: 8px;
+  cursor: pointer;
+  color: var(--accent-color);
+  text-decoration: underline;
+  border-bottom: 1px solid #ccc;
+}

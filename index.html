@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aplikasi Cuaca Real-Time</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <button onclick="showSection('home')">🏠 Home</button>
+      <button onclick="showSection('history')">📜 Riwayat</button>
+      <button onclick="showSection('about')">ℹ️ Tentang</button>
+      <button onclick="toggleDarkMode()">🌗</button>
+    </div>
+
+    <div id="homeSection">
+      <h2>🌤️ Aplikasi Cuaca Real-Time</h2>
+      <input type="text" id="cityInput" placeholder="Masukkan nama kota..." />
+      <button id="searchBtn">🔍 Cari Cuaca</button>
+
+      <div class="weather-info" id="weatherInfo"></div>
+      <div class="forecast" id="forecast"></div>
+      <div id="map"></div>
+    </div>
+
+    <div id="historySection" style="display:none">
+      <h3>📜 Riwayat Pencarian</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+    <div id="aboutSection" style="display:none">
+      <h3>ℹ️ Tentang Aplikasi</h3>
+      <p>Aplikasi ini menampilkan informasi cuaca real-time dan prakiraan 5 hari dengan tampilan modern serta emoji sesuai kondisi cuaca 🌦️.</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
